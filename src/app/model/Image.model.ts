@@ -1,4 +1,4 @@
 export class ImageModel {
-    path?: String;
-    extension?: String;
+    path: String;
+    extension: String;
 }

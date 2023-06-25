@@ -1,9 +1,14 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col">
+        <div class="col-12 d-flex justify-content-center">
+            <h1>Listado de Superheroes</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
             <div class="d-grid gap-2">
                 <div *ngFor="let character of characters?.data?.results">
-                    <button class="btn btn-primary btn-lg" type="button" (click)="openModal()">{{character.name}}</button>
+                    <button class="btn btn-primary btn-lg" type="button" (click)="openModal(character.id)">{{character.name}}</button>
                 </div>
             </div>
         </div>

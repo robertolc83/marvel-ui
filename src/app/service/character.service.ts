@@ -18,5 +18,7 @@ export class CharacterService {
         return this.http.get(`${this.servicePath}`);
     }
 
-
+    getById(characterId: number): Observable<any> {
+        return this.http.get(`${this.servicePath}/${characterId}`);
+    }
 }

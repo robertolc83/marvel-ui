@@ -6,6 +6,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { CharacterComponent } from './character/character.component';
 import { CharacterInformationComponent } from './character/character-information/character-information.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

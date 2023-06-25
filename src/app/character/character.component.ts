@@ -11,7 +11,7 @@ import { CharacterInformationComponent } from './character-information/character
 })
 export class CharacterComponent implements OnInit {
 
-  characters: CharacterDataWrapperModel | undefined;
+  characters: CharacterDataWrapperModel;
 
 
   constructor(
@@ -37,8 +37,12 @@ export class CharacterComponent implements OnInit {
       });
   }
 
-  openModal() {
-    const modalRef = this.modalService.open(CharacterInformationComponent);
+  openModal(characterId: number) {
+    const modalRef = this.modalService.open(CharacterInformationComponent, {size: 'lg'});
+    modalRef.componentInstance.characterId = characterId;
+    modalRef.closed.subscribe(() => {
+      this.refreshlist();
+    });
   }
 
 

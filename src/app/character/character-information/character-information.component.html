@@ -1,1 +1,27 @@
-<p>character-information works!</p>
+<div class="modal-header">
+    <div class="col d-flex justify-content-center">
+      <h4 class="modal-title">
+        {{characterId && character ? character.name : 'Personaje'}}
+      </h4>
+    </div>
+    <div class="col-auto">
+      <button type="button"
+              class="btn-close ms-0"
+              aria-label="Close"
+              (click)="activeModal.dismiss()">
+      </button>
+    </div>
+</div>
+
+<div class="modal-body">
+    <div class="row">
+        <div class="col-12">
+            <div class="img" style="background-image: url('{{imageUrl}}')"></div>
+        </div>
+    </div>    
+    <div class="row mt-3">
+        <div class="col-12 d-flex justify-content-center">
+            <h3>{{character && character.description ? character.description : 'Sin Descripcion'}}</h3>
+        </div>
+    </div>   
+</div>
