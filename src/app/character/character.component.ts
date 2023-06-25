@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CharacterService } from '../service/character.service';
 import { CharacterDataWrapperModel } from '../model/characterDataWrapper.model';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { CharacterInformationComponent } from './character-information/character-information.component';
 
 @Component({
   selector: 'app-character',
@@ -14,6 +16,8 @@ export class CharacterComponent implements OnInit {
 
   constructor(
     private characterService: CharacterService,
+    private modalService: NgbModal,
+
   ) { }
 
   ngOnInit(): void {
@@ -34,6 +38,7 @@ export class CharacterComponent implements OnInit {
   }
 
   openModal() {
+    const modalRef = this.modalService.open(CharacterInformationComponent);
   }
 
 
