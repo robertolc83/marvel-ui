@@ -3,7 +3,7 @@
         <div class="col">
             <div class="d-grid gap-2">
                 <div *ngFor="let character of characters?.data?.results">
-                    <button class="btn btn-primary btn-lg" type="button">{{character.name}}</button>
+                    <button class="btn btn-primary btn-lg" type="button" (click)="openModal()">{{character.name}}</button>
                 </div>
             </div>
         </div>
