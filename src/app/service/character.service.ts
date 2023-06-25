@@ -21,4 +21,16 @@ export class CharacterService {
     getById(characterId: number): Observable<any> {
         return this.http.get(`${this.servicePath}/${characterId}`);
     }
+
+    //QueryLogService
+
+    addQueryLog(queryLog: any): Observable<any> {
+        return this.http.post(`${this.servicePath}`, queryLog);
+     }
+
+     GetAllQueryLog(): Observable<any> {
+        return this.http.get(`${this.servicePath}/queryLog`);
+     }
+
+
 }

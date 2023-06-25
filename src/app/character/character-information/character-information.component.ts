@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { CharacterModel } from 'src/app/model/Character.model';
+import { CharacterModel } from 'src/app/model/character.model';
 import { CharacterDataWrapperModel } from 'src/app/model/characterDataWrapper.model';
 import { CharacterService } from 'src/app/service/character.service';
 
