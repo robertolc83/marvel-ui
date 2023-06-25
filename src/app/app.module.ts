@@ -6,13 +6,15 @@ import {HttpClientModule} from "@angular/common/http";
 import { CharacterComponent } from './character/character.component';
 import { CharacterInformationComponent } from './character/character-information/character-information.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { QueryLogComponent } from './character/query-log/query-log.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     CharacterComponent,
-    CharacterInformationComponent
+    CharacterInformationComponent,
+    QueryLogComponent
   ],
   imports: [
     BrowserModule,

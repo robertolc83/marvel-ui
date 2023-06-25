@@ -5,6 +5,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CharacterInformationComponent } from './character-information/character-information.component';
 import { CharacterModel } from '../model/character.model';
 import { QueryLogModel } from '../model/queryLog.model';
+import { QueryLogComponent } from './query-log/query-log.component';
 
 @Component({
   selector: 'app-character',
@@ -69,5 +70,11 @@ export class CharacterComponent implements OnInit {
     this.queryLog.characterId = character.id;
   }
 
+  openQueryLog() {
+    const modalRef = this.modalService.open(QueryLogComponent, {size: 'xl'});
+    modalRef.closed.subscribe(() => {
+      this.refreshlist();
+    });
+  }
 
 }
